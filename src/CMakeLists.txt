@@ -1,0 +1,5 @@
+cmake_minimum_required (VERSION 3.5)
+project (exact)
+add_definitions("-std=c++11 -O3 -flto -Wall -Wextra -Wshadow -g -Wfatal-errors -Wno-sign-compare -Wno-literal-suffix -fPIC -march=native -static")
+file(GLOB SOURCES "*.cpp")
+add_executable(exact ${SOURCES})
