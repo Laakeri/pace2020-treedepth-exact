@@ -11,8 +11,6 @@
 #include "bitset.hpp"
 
 namespace sms {
-// Interface
-
 namespace utils {
 template<typename T>
 void SortAndDedup(std::vector<T>& vec);
@@ -85,10 +83,7 @@ class PolyHash {
   }
 };
 
-// Implementation
-
 namespace utils {
-
 template<typename T>
 T GetRand(T a, T b, std::mt19937& gen) {
   return std::uniform_int_distribution<T>(a,b)(gen);
@@ -123,6 +118,7 @@ inline int GetU(int x, std::vector<int>& un) {
   }
 }
 } // namespace utils
+
 template<typename T>
 void Log::WriteImpl(T message) {
   std::cerr<<message;

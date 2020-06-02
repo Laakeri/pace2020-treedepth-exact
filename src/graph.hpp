@@ -87,7 +87,6 @@ class SparseGraph;
 template<size_t chunks>
 class FGraph;
 
-// SPARSEGRAPH
 class SparseGraph {
  public:
   explicit SparseGraph(int n);
@@ -135,9 +134,6 @@ class SparseGraph {
   void Dfs(int v, std::vector<char>& blocked, std::vector<int>& component) const;
 };
 
-
-
-// FIXEDGRAPH
 template <size_t chunks>
 class FGraph {
  public:
@@ -187,11 +183,6 @@ class FGraph {
 };
 
 
-
-
-
-
-// IMPLEMENTATION
 template<size_t chunks>
 SparseGraph::SparseGraph(const FGraph<chunks>& graph) {
   n_ = graph.n();
@@ -784,7 +775,6 @@ void FGraph<chunks>::Print(std::ostream& out) const {
 
 template<size_t chunks>
 void SepRec(const FGraph<chunks>& graph, int a, int b, FBitset<chunks> neA, FBitset<chunks> neB, FBitset<chunks> F, std::vector<FBitset<chunks>>& minseps, int sz, int n) {
-  // Log::Write(3, "seprec ", a, " ", b, " ", A.Elements(), " ", F.Elements(), " ", sz);
   assert(F.Popcount() <= sz);
   FBitset<chunks> inter = neA;
   inter &= neB;
@@ -808,7 +798,7 @@ void SepRec(const FGraph<chunks>& graph, int a, int b, FBitset<chunks> neA, FBit
     }
   }
 
-  // pruning
+  // Pruning
   if (a_size + 3*(inter.Popcount() - (sz - F.Popcount())) > szthr) {
     std::vector<std::vector<int>> paths;
     for (int v : inter) {

@@ -5,10 +5,9 @@
 #include "utils.hpp"
 
 namespace sms {
-// Interface
 template<typename T>
 class StaticSet {
-public:
+ public:
   StaticSet();
   explicit StaticSet(const std::vector<T>& values);
   explicit StaticSet(const std::vector<std::pair<T, T> >& values);
@@ -18,12 +17,10 @@ public:
   T Kth(int k) const;
   int Size() const;
   std::vector<T> Values() const;
-private:
+ private:
   std::vector<T> values_;
 };
 
-
-// Implementation
 template<typename T>
 StaticSet<T>::StaticSet(const std::vector<T>& values) {
   Init(values);

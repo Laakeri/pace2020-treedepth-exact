@@ -34,7 +34,6 @@ class MSSolve {
   std::vector<int> Get(int goal);
 
   bool incorrect_msenum_ = false;
-
   std::map<uint64_t, std::vector<FBitset<chunks>>> isom_map_;
 
  private:
@@ -49,7 +48,6 @@ class MSSolve {
   FLBSieve<chunks> lb_sieve_;
   bool Go(FBitset<chunks> vert, int k, const std::vector<Edge>& parent_edges, const std::vector<FBitset<chunks>>& parent_minseps, int parent_n, bool can_induce_seps);
   bool Reco(FBitset<chunks> vert, int k, const std::vector<Edge>& parent_edges);
-
   bool Isom(const FBitset<chunks>& v1, const FBitset<chunks>& v2) const;
 };
 
@@ -585,7 +583,6 @@ bool MSSolve<chunks>::Go(FBitset<chunks> vert, int k, const vector<Edge>& parent
   lbt.stop();
 
   // Isomorphism
-  // Tune this
   if (n >= graph_.n() - graph_.n()/3) {
     isot.start();
     uint64_t isohash = graph_.Hash2(vert);

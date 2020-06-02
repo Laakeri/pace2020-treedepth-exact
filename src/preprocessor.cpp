@@ -188,7 +188,6 @@ void Preprocessor::ParseTrees(SparseGraph& graph) {
             assert(rvs[j].size() > 0);
           }
         }
-        // int rv = ConstructTreePar(i, -1, (int)sol.size()-1, graph, parent);
         int iss = isols.size();
         DelTree(i, graph, parent, isols);
         int v = i;
