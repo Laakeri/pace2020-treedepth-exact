@@ -11,9 +11,7 @@
 #include "utils.hpp"
 #include "bitset.hpp"
 
-namespace triangulator {
-
-
+namespace sms {
 SparseGraph::SparseGraph(int n)
   : n_(n), m_(0), adj_list_(n) {
   std::vector<int> identity(n);
@@ -239,4 +237,4 @@ int SparseGraph::Mincut(int a, int b) const {
   int fl = mf.getMaxFlow(0, 1, n_);
   return fl;
 }
-} // namespace triangulator                                           
+} // namespace sms                                           

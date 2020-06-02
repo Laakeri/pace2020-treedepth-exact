@@ -4,7 +4,7 @@
 
 #include "utils.hpp"
 
-namespace triangulator {
+namespace sms {
 // Interface
 template<typename T>
 class StaticSet {
@@ -72,4 +72,4 @@ template<typename T>
 std::vector<T> StaticSet<T>::Values() const {
   return values_;
 }
-} // namespace triangulator
+} // namespace sms

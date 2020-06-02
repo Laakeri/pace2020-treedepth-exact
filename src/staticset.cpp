@@ -1,1 +1,0 @@
-#include "staticset.hpp"

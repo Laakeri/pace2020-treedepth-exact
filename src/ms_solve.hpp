@@ -9,7 +9,7 @@
 #define F first
 #define S second
 
-namespace triangulator {
+namespace sms {
 using std::max;
 using std::vector;
 
@@ -29,8 +29,8 @@ struct MsPiece {
 template<size_t chunks>
 class MSSolve {
  public:
- 	MSSolve(const FGraph<chunks>& graph);
- 	int Solve(int goal, bool reti);
+  MSSolve(const FGraph<chunks>& graph);
+  int Solve(int goal, bool reti);
   std::vector<int> Get(int goal);
 
   bool incorrect_msenum_ = false;
@@ -38,10 +38,10 @@ class MSSolve {
   std::map<uint64_t, std::vector<FBitset<chunks>>> isom_map_;
 
  private:
- 	int PieceId(const FBitset<chunks>& piece, bool insert, bool expect);
+  int PieceId(const FBitset<chunks>& piece, bool insert, bool expect);
   int MsPieceId(const FBitset<chunks>& piece, bool insert, bool expect);
- 	FGraph<chunks> graph_;
- 	std::vector<int> resu_;
+  FGraph<chunks> graph_;
+  std::vector<int> resu_;
   std::vector<Piece> pcs_;
   std::vector<MsPiece<chunks>> ms_pcs_;
   FBitsetMap<chunks> bs_cac_;
@@ -822,4 +822,4 @@ vector<int> MSSolve<chunks>::Get(int goal) {
   return resu_;
 }
 
-} // namespace triangulator
+} // namespace sms

@@ -10,8 +10,7 @@
 
 #define BITS 64
 
-namespace triangulator {
-// FIXEDBITSET
+namespace sms {
 template <size_t chunks>
 class FBitset {
  public:
@@ -633,7 +632,6 @@ class FLBSieve {
   }
   void Resize(int lb) {
     int nmasks = masks_[lb].size()+1;
-    //std::cerr<<"resize "<<lb<<" "<<nmasks<<" "<<elements_[lb]<<std::endl;
     masks_[lb].clear();
     int ib = len_/nmasks;
     assert(nmasks*ib <= len_);
@@ -649,7 +647,6 @@ class FLBSieve {
         mask.SetTrue(j);
         int ic = NIntersect(lb, mask);
         if (ic >= elements_[lb]/2 || j+1 == ep) {
-          //std::cerr<<"nmask "<<mask.Popcount()<<" "<<ic<<std::endl;
           masks_[lb].push_back(mask);
           sp=ep;
           break;
@@ -709,4 +706,4 @@ class FLBSieve {
   }
 };
 
-} // namespace triangulator
+} // namespace sms

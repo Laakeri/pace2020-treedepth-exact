@@ -10,7 +10,7 @@
 
 #include "bitset.hpp"
 
-namespace triangulator {
+namespace sms {
 // Interface
 
 namespace utils {
@@ -189,4 +189,4 @@ template<typename T, typename... Args>
 void Log::P(T first_message, Args... message) {
   Write(0, first_message, message...);
 }
-} // namespace triangulator
+} // namespace sms

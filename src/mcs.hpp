@@ -5,7 +5,7 @@
 
 #include "graph.hpp"
 
-namespace triangulator {
+namespace sms {
 namespace mcs {
 template<size_t chunks>
 std::vector<int> Mcs(const FGraph<chunks>& graph);
@@ -178,4 +178,4 @@ std::vector<FBitset<chunks>> ChordalMinseps(const FGraph<chunks>& graph) {
   return ret;
 }
 } // namespace mcs
-} // namespace triangulator
+} // namespace sms

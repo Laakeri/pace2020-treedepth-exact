@@ -19,7 +19,7 @@
 #include "preprocessor.hpp"
 #include "ms_solve.hpp"
 
-using namespace triangulator;
+using namespace sms;
 
 #define F first
 #define S second

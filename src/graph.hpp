@@ -9,7 +9,7 @@
 #include "staticset.hpp"
 #include "bitset.hpp"
 
-namespace triangulator {
+namespace sms {
 namespace {
 using std::vector;
 using std::queue;
@@ -951,4 +951,4 @@ int FGraph<chunks>::MaxCompSize(const FBitset<chunks>& minsep, const FBitset<chu
   }
   return ret;
 }
-} // namespace triangulator
+} // namespace sms

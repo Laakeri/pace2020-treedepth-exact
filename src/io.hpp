@@ -8,10 +8,9 @@
 #include "graph.hpp"
 #include "utils.hpp"
 
-namespace triangulator {
-
+namespace sms {
 class Io {
-public:
+ public:
   SparseGraph ReadGraph(std::istream& in);
 };
-} // namespace triangulator
+} // namespace sms

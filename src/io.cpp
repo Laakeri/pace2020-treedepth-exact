@@ -10,8 +10,7 @@
 #include "graph.hpp"
 #include "utils.hpp"
 
-namespace triangulator {
-
+namespace sms {
 std::vector<std::string> GetTokens(std::string s) {
   std::stringstream ss;
   ss<<s;
@@ -48,4 +47,4 @@ SparseGraph Io::ReadGraph(std::istream& in) {
   assert(graph.n() == n && graph.m() == m);
   return graph;
 }
-} // namespace triangulator
+} // namespace sms

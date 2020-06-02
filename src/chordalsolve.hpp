@@ -8,7 +8,7 @@
 #define F first
 #define S second
 
-namespace triangulator {
+namespace sms {
 using std::max;
 using std::vector;
 
@@ -37,16 +37,16 @@ struct PieceC {
 template<size_t chunks>
 class ChordalSolve {
  public:
- 	ChordalSolve(const FGraph<chunks>& graph);
- 	int Solve(int goal, int tune, double timelimit);
+  ChordalSolve(const FGraph<chunks>& graph);
+  int Solve(int goal, int tune, double timelimit);
   std::vector<int> Get(int goal);
  private:
- 	int PieceId(const FBitset<chunks>& piece, bool insert, bool expect);
- 	int glo_goal_;
- 	int tune_;
- 	double time_limit_;
- 	Timer timer_;
- 	FGraph<chunks> graph_;
+  int PieceId(const FBitset<chunks>& piece, bool insert, bool expect);
+  int glo_goal_;
+  int tune_;
+  double time_limit_;
+  Timer timer_;
+  FGraph<chunks> graph_;
   std::vector<int> resu_;
   std::vector<PieceC<chunks>> pcs_;
   FBitsetMap<chunks> bs_cac_;
@@ -410,4 +410,4 @@ vector<int> ChordalSolve<chunks>::Get(int goal) {
   }
   return resu_;
 }
-} // namespace
+} // namespace sms

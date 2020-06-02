@@ -3,7 +3,7 @@
 #include <chrono>
 #include <cassert>
 
-namespace triangulator {
+namespace sms {
 int Log::log_level_ = 10000;
 void Log::SetLogLevel(int lvl) {
   log_level_ = lvl;
@@ -42,4 +42,4 @@ double Timer::get() {
 void Timer::clear() {
   elapsedTime = std::chrono::duration<double>(std::chrono::duration_values<double>::zero());
 }
-} // namespace triangulator
+} // namespace sms
