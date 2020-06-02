@@ -4,3 +4,7 @@ Submission to the exact treedepth track of PACE 2020 by Tuukka Korhonen (Univers
 
 ## Installation
 Use `cmake .` and `make` in the `src/` directory, or alternatively just compile all the files together with g++. No external libraries are required.
+
+
+## Note
+The code in this repository has been syntactically edited after the submission by renaming variables, improving formatting and removing unused code. The original submission is available in [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3872898.svg)](https://doi.org/10.5281/zenodo.3872898).
