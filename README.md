@@ -1,5 +1,5 @@
 # SMS
-SMS is a submission to the exact treedepth track of PACE 2020 by Tuukka Korhonen (University of Helsinki). The submission is based on an algorithm that branches on (small) minimal separators and thus is named `SMS`.
+SMS is a submission to the exact treedepth track of PACE 2020 by Tuukka Korhonen (University of Helsinki). The submission is based on an algorithm that branches on (small) minimal separators and thus is named `SMS`. The description of SMS is available in [https://arxiv.org/abs/2006.07302](https://arxiv.org/abs/2006.07302).
 
 
 ## Installation
